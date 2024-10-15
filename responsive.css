@@ -1,0 +1,8 @@
+@media screen and (max-width:412px) {
+    
+    .sidebar h1,
+    h3,
+    p {
+        display: none;
+    }
+}
