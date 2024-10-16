@@ -8,16 +8,28 @@ body {
     font-family:  Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic ProN,Meiryo,MS Gothic;
 }
 
-a {
+div .sidebar a {
     text-decoration: none;
     color: inherit;
     display: flex;
     margin-bottom: 10px;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .spotify {
     display: flex;
     height: calc(100vh - 80px);
+    position: relative;
 }
 
 .spotify svg {
@@ -33,15 +45,40 @@ a {
     background-color: #080b12;
 }
 
-.sidebar {
-    color: white;
-    width: 250px;
+.sidebar{
+    color: rgba(100, 100, 100, 0.685);
+    width: 220px;
     height: 100%;
     background-color: black;
     padding: 25px 0px 0px 20px;
 }
 
+.sidebar-bottom {
+   position: absolute;
+   bottom: 0;
+   padding: 25px 20px 0px 20px;
+}
 
+.download {
+    width: 20px;
+    height: 20px;
+}
+
+.profile {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    background-color: gray;
+    margin-right: 10px;
+}
+
+div .sidebar-bottom p {
+    margin: 10px 15px 5px 0px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+}
 
 a h3,
 p {
@@ -50,14 +87,27 @@ p {
     padding-bottom: 5px;
 }
 
+.spotify-logo {
+    color: white;
+}
+
 .navbar {
    display: flex;
    justify-content: center;
-   width: 100%;
+   gap: 30px;
+   color: gray;
+   padding-top: 10px;
+}
+
+.navbar a:hover {
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: lime 2px solid;
+    
 }
 
 .main {
-    width: calc(100% - 150px );
+    width: calc(100% - 180px );
     background-color: #141922;
 }
 
@@ -91,7 +141,11 @@ p {
 
   a:hover :not(.btn-upgrade, .spotify-logo) {
     color: rgb(255, 255, 255);
-    font-size: large;
+    
+  }
+
+  div .sidebar-bottom a:hover {
+    color: white;
   }
 
   .spotify-logo:hover {
@@ -114,3 +168,19 @@ p {
     border-radius: 30px;
     margin-right: 20px;
   }
+  
+  .main {
+    overflow: auto;
+  }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row {
+    width: calc(100% - 180px / 6 )
+}
+
+img {
+   object-fit: cover;
+}

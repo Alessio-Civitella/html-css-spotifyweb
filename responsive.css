@@ -1,8 +1,61 @@
-@media screen and (max-width:412px) {
+@media screen and (max-width:768) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media screen and (max-width:480px) {
     
     .sidebar h1,
     h3,
-    p {
+    p,
+    h2 {
         display: none;
     }
+
+    .sidebar .flex a {
+        display: none;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sidebar {
+        padding: 25px 20px 0px 20px;
+        width: fit-content;
+        position: relative;
+    }
+
+    .main {
+        width: 100%;
+    }
+    
+    .sidebar-bottom {
+        position: absolute;
+     }
+
+     .sidebar-bottom hr {
+        display: none;
+     }
+
+     .sidebar-bottom p {
+        display: none;
+     }
+
+     .sidebar-bottom a {
+        display: none;
+     }
+
+    
 }
